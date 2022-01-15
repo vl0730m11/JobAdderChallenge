@@ -1,0 +1,9 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div *ngFor="let job of jobList" class="row">
+      <div class="col">
+        <app-job-info [jobInfo]="job"></app-job-info>
+      </div>
+    </div>
+  </div>
+</div>

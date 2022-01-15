@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>
+    <h2>Job: {{jobInfo.name}}</h2>
+  </mat-card-title>
+  <mat-card-content>
+    <h5>Company: {{jobInfo.company}}</h5>
+    <h5>Skills: {{jobInfo.skills}}</h5>
+    <button mat-raised-button color="primary" (click)="getBestCandidate(jobInfo.jobId)">Get Best Candidate</button>
+  </mat-card-content>
+  <mat-card-footer>
+
+  </mat-card-footer>
+</mat-card>
