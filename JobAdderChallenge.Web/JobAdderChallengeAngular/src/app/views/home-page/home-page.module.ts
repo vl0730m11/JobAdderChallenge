@@ -1,11 +1,13 @@
 import { NgModule } from "@angular/core";
-import { JobInfoComponent } from "./components/job-info/job-info.component";
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    //JobInfoComponent
   ],
   imports: [
+    MatCardModule,
+    MatButtonModule,
   ],
   exports: [
 

@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { JobInfoComponent } from './views/home-page/components/job-info/job-info.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { CandidateInfoComponent } from './views/home-page/components/candidate-info/candidate-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    JobInfoComponent
+    JobInfoComponent,
+    CandidateInfoComponent
   ],
   imports: [
     BrowserModule,

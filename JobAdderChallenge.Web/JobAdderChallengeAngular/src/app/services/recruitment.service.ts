@@ -17,4 +17,8 @@ export class RecruitmentService {
     return this._httpService.get<any>(url)
   }
 
+  getBestCandidate(jobId: number): Observable<any> {
+    const url = this._url + "getBestCandidate";
+    return this._httpService.get<any>(url + '/?jobId=' + jobId)
+  }
 }
