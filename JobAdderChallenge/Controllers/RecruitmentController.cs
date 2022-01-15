@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JobAdderChallenge.Services.RecruitmentService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,10 +13,10 @@ namespace JobAdderChallenge.Controllers
     [RoutePrefix("api/Recruitment")]
     public class RecruitmentController : ApiController
     {
-        //private readonly IRecruitmentService _recruitmentService;
-        public RecruitmentController()
+        private readonly IRecruitmentService _recruitmentService;
+        public RecruitmentController(IRecruitmentService recruitmentService)
         {
-            //_recruitmentService = recruitmentService;
+            _recruitmentService = recruitmentService;
         }
 
         [Route("getJobList")]
@@ -24,7 +25,7 @@ namespace JobAdderChallenge.Controllers
         {
             return Ok(new
             {
-                data = "Testing"
+                data = await _recruitmentService.getJobList()
             });
         }
 
@@ -34,7 +35,7 @@ namespace JobAdderChallenge.Controllers
         {
             return Ok(new
             {
-                data = "Testing"
+                data = await _recruitmentService.getCandidateList()
             });
         }
     }
