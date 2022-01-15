@@ -38,5 +38,15 @@ namespace JobAdderChallenge.Controllers
                 data = await _recruitmentService.getCandidateList()
             });
         }
+
+        [Route("getBestCandidate")]
+        [HttpGet]
+        public async Task<IHttpActionResult> getBestCandidate([FromUri] int jobId)
+        {
+            return Ok(new
+            {
+                data = await _recruitmentService.getBestCandidate(jobId)
+            });
+        }
     }
 }
