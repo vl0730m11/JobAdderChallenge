@@ -6,8 +6,8 @@
     <h5>Company: {{jobInfo.company}}</h5>
     <h5>Skills: {{jobInfo.skills}}</h5>
     <button mat-raised-button color="primary" (click)="getBestCandidate(jobInfo.jobId)">Get Best Candidate</button>
-    <div>
-
+    <div *ngIf="isLoading" class="footer">
+      -Loading-
     </div>
   </mat-card-content>
   <mat-card-footer *ngIf="bestCandidate != undefined" class="footer">

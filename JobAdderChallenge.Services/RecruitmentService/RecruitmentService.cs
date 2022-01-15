@@ -12,6 +12,7 @@ namespace JobAdderChallenge.Services.RecruitmentService
         Task<List<JobModel>> getJobList();
         Task<List<CandidateModel>> getCandidateList();
         Task<BestCandidateModel> getBestCandidate(int jobId);
+        int getMaxScore(JobModel job);
     }
     public class RecruitmentService : IRecruitmentService
     {
@@ -98,7 +99,7 @@ namespace JobAdderChallenge.Services.RecruitmentService
             return result;
         }
 
-        private int getMaxScore(JobModel job) {
+        public int getMaxScore(JobModel job) {
             var result = 0;
             var jobSkills = job.skills.Split(',');
             for (int i = 1; i <= jobSkills.Length; i++)

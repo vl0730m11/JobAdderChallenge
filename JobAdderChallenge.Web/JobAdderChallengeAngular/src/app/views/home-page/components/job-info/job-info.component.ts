@@ -16,6 +16,7 @@ export class JobInfoComponent implements OnInit {
   jobInfo!: JobModel;
   bestCandidate!: BestCandidateModel;
   private sub: Subscription = new Subscription();
+  isLoading: boolean = false;
 
   constructor(
     private service: RecruitmentService
@@ -25,10 +26,10 @@ export class JobInfoComponent implements OnInit {
   }
 
   getBestCandidate(jobId: number): void {
-    console.log("jobId: ", jobId);
+    this.isLoading = true;
     this.sub = this.service.getBestCandidate(jobId).subscribe((res) => {
       this.bestCandidate = res.data;
-      console.log("this.bestCandidate: ", this.bestCandidate);
+      this.isLoading = false;
     });
   }
 }
