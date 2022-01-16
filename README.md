@@ -1,5 +1,5 @@
 ## Develop server
-Run .sln file, add JobAdderChallenge to IIS Manager API. Navigate to `http://localhost:29003`
+Run .sln file at JobAdderChallenge/JobAdderChallenge.sln, add JobAdderChallenge to IIS Manager API. Navigate to `http://localhost:29003`
 
 ## Develop AngularWeb
 open JobAdderChallenge.Web/JobAdderChallengeAngular
