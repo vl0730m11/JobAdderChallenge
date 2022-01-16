@@ -18,5 +18,8 @@ Propose a solution for JobAdder Challenge
 Score will be calculated according to skills required for the job, from most-relevant to least-relevant
 - Ex: Job name: Office Coordinator 
 - "skills": "recruiting, negotiation, placements, hr, admin" -> 5 skills listed
-- maxScore = 1 + 2 + 3 + 4 + 5 = 15
 - recruiting = 5pts, negotiation = 4pts, etc.
+- maxScore = 5 + 4 + 3 + 2 + 1 = 15
+
+# Exceptions
+- In case of 2 or more candidates share the same score, system will emit candidate who applied first

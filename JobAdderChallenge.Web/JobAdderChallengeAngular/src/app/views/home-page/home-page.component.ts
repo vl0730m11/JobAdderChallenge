@@ -11,15 +11,18 @@ import { RecruitmentService } from 'src/app/services/recruitment.service';
 export class HomePageComponent implements OnInit {
   private sub: Subscription = new Subscription();
   jobList: JobModel[] = [];
+  isLoading: boolean = false;
 
   constructor(
     private service: RecruitmentService
   ) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.sub = this.service.getJobList().subscribe((res) => {
       this.jobList = res.data;
-      console.log("this.jobList: ", this.jobList);
+      //console.log("this.jobList: ", this.jobList);
+      this.isLoading = false;
     });
   }
 
