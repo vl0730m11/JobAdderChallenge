@@ -177,7 +177,3 @@ $RECYCLE.BIN/
 
 /*.swp
 connections.local.config
-
-*.csproj
-*.suo
-*.
